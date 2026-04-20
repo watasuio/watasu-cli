@@ -1,0 +1,43 @@
+{
+  "version": "0.1.0",
+  "tag": "v0.1.0",
+  "published_at": "2026-04-20T22:49:04Z",
+  "repository": "https://github.com/watasuio/watasu-cli",
+  "platforms": {
+    "darwin-amd64": {
+      "asset": "watasu_0.1.0_darwin_amd64.tar.gz",
+      "archive": "tar.gz",
+      "binary": "watasu",
+      "url": "https://github.com/watasuio/watasu-cli/releases/download/v0.1.0/watasu_0.1.0_darwin_amd64.tar.gz",
+      "checksum": "58227a5e5f508bf304fb01c6220c9d676e9773167458867178a0c03299b01831"
+    },
+    "darwin-arm64": {
+      "asset": "watasu_0.1.0_darwin_arm64.tar.gz",
+      "archive": "tar.gz",
+      "binary": "watasu",
+      "url": "https://github.com/watasuio/watasu-cli/releases/download/v0.1.0/watasu_0.1.0_darwin_arm64.tar.gz",
+      "checksum": "41ffed9c983f00111b6802e72e019df915a86bbd8cc28394262eb9c603a22e9e"
+    },
+    "linux-amd64": {
+      "asset": "watasu_0.1.0_linux_amd64.tar.gz",
+      "archive": "tar.gz",
+      "binary": "watasu",
+      "url": "https://github.com/watasuio/watasu-cli/releases/download/v0.1.0/watasu_0.1.0_linux_amd64.tar.gz",
+      "checksum": "89b80ddab13fa23595a8fd2cf917c4a0be84b4dc2ec444cad35a29d7efba64b7"
+    },
+    "linux-arm64": {
+      "asset": "watasu_0.1.0_linux_arm64.tar.gz",
+      "archive": "tar.gz",
+      "binary": "watasu",
+      "url": "https://github.com/watasuio/watasu-cli/releases/download/v0.1.0/watasu_0.1.0_linux_arm64.tar.gz",
+      "checksum": "8b16993a305dbd6df033856cb9975c83b94f285f2cb5b28da6e8799c23c27157"
+    },
+    "windows-amd64": {
+      "asset": "watasu_0.1.0_windows_amd64.zip",
+      "archive": "zip",
+      "binary": "watasu.exe",
+      "url": "https://github.com/watasuio/watasu-cli/releases/download/v0.1.0/watasu_0.1.0_windows_amd64.zip",
+      "checksum": "6f96b68c5e44722466ea44ca46077f6b1e916146d87b1aee69111abcb62f67c5"
+    }
+  }
+}
