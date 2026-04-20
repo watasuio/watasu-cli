@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Watasu CLI</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f6f1e8;
+        --card: rgba(255, 255, 255, 0.86);
+        --fg: #13211f;
+        --muted: #546560;
+        --accent: #0d8b6f;
+        --accent-2: #ffb34d;
+        --border: rgba(19, 33, 31, 0.14);
+        --shadow: 0 24px 60px rgba(19, 33, 31, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        color: var(--fg);
+        background:
+          radial-gradient(circle at top left, rgba(255, 179, 77, 0.28), transparent 30%),
+          radial-gradient(circle at top right, rgba(13, 139, 111, 0.22), transparent 32%),
+          linear-gradient(180deg, #fbf7f1 0%, var(--bg) 100%);
+      }
+
+      main {
+        max-width: 920px;
+        margin: 0 auto;
+        padding: 48px 20px 64px;
+      }
+
+      .eyebrow {
+        display: inline-block;
+        padding: 8px 12px;
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.66);
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      h1 {
+        margin: 18px 0 12px;
+        font-size: clamp(38px, 8vw, 72px);
+        line-height: 0.96;
+        letter-spacing: -0.05em;
+      }
+
+      p {
+        max-width: 56ch;
+        color: var(--muted);
+        font-size: 18px;
+        line-height: 1.6;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 18px;
+        margin-top: 30px;
+      }
+
+      .card {
+        padding: 22px;
+        border: 1px solid var(--border);
+        border-radius: 24px;
+        background: var(--card);
+        box-shadow: var(--shadow);
+        backdrop-filter: blur(14px);
+      }
+
+      h2 {
+        margin: 0 0 12px;
+        font-size: 18px;
+      }
+
+      pre {
+        margin: 14px 0 0;
+        padding: 14px;
+        overflow-x: auto;
+        border-radius: 16px;
+        background: #13211f;
+        color: #f7f7f2;
+        font-size: 14px;
+      }
+
+      a {
+        color: var(--fg);
+      }
+
+      .links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-top: 28px;
+      }
+
+      .links a {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--accent);
+        text-decoration: none;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <span class="eyebrow">Install the Watasu CLI</span>
+      <h1>Watasu CLI.<br>Work from your terminal.</h1>
+      <p>
+        Use <code>watasu</code> to log in, manage apps, and work with Watasu from the command
+        line. Install it below, then sign in and get started with your account on
+        <a href="https://watasu.io">watasu.io</a>.
+      </p>
+
+      <section class="grid">
+        <article class="card">
+          <h2>macOS / Linux / WSL</h2>
+          <pre><code>curl -fsSL https://watasuio.github.io/watasu-cli/install.sh | bash</code></pre>
+        </article>
+
+        <article class="card">
+          <h2>Windows PowerShell</h2>
+          <pre><code>irm https://watasuio.github.io/watasu-cli/install.ps1 | iex</code></pre>
+        </article>
+
+        <article class="card">
+          <h2>Homebrew</h2>
+          <pre><code>brew tap watasuio/watasu
+brew install watasu</code></pre>
+        </article>
+      </section>
+
+      <div class="links">
+        <a href="https://watasu.io">watasu.io</a>
+        <a href="https://github.com/watasuio/watasu-cli/releases">GitHub Releases</a>
+        <a href="latest.json">Latest Manifest</a>
+        <a href="https://github.com/watasuio/homebrew-watasu/blob/main/Formula/watasu.rb">Homebrew Formula</a>
+      </div>
+    </main>
+  </body>
+</html>
