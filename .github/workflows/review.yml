@@ -1,0 +1,33 @@
+name: Review
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    branches: [main]
+
+concurrency:
+  group: review-${{ github.repository }}-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  metadata:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v6
+      - name: Validate JSON and latest manifest
+        run: |
+          jq empty latest.json manifests/*.json
+          version="$(jq -r .version latest.json)"
+          cmp latest.json "manifests/v${version}.json"
+          jq -e '
+            (.tag == ("v" + .version)) and
+            (.platforms | length > 0) and
+            all(.platforms[];
+              (.checksum | test("^[0-9a-f]{64}$")) and
+              (.url | startswith("https://github.com/watasuio/watasu-cli/releases/download/")))
+          ' latest.json >/dev/null
+      - name: Lint installer
+        run: shellcheck install.sh
