@@ -20,14 +20,19 @@ irm https://watasuio.github.io/watasu-cli/install.ps1 | iex
 
 ## Homebrew
 
-The Homebrew tap lives in the dedicated public repository `watasuio/homebrew-watasu`, so users get the short tap command:
+Install from the official Watasu tap:
 
 ```bash
-brew tap watasuio/watasu
-brew install watasu
+brew install watasuio/watasu/watasu
 ```
 
-The formula source is published to `https://github.com/watasuio/homebrew-watasu`.
+The fully qualified name trusts only the Watasu formula. See
+[Homebrew tap trust](https://docs.brew.sh/Tap-Trust) and the
+[formula source](https://github.com/watasuio/homebrew-watasu/blob/main/Formula/watasu.rb).
+
+Update with `brew upgrade watasuio/watasu/watasu`. If an existing installation
+reports the formula as untrusted, run `brew trust --formula watasuio/watasu/watasu`
+and retry the upgrade.
 
 ## Release Metadata
 
