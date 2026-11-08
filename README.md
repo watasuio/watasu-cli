@@ -34,6 +34,20 @@ Update with `brew upgrade watasuio/watasu/watasu`. If an existing installation
 reports the formula as untrusted, run `brew trust --formula watasuio/watasu/watasu`
 and retry the upgrade.
 
+## App build billing
+
+Deploying app source starts a paid build: **€0.50/hour**, billed per actual
+running second with **8 vCPU and 15 GiB memory limits**. Failed or canceled builds
+charge for the time they ran. Queue time and image-only pipeline promotions have
+no build charge.
+
+The app's billing account must have a positive available balance sufficient for
+at least one second before manual, Git, connected GitHub, or pipeline source
+builds start. Each build reserves up to €0.50 for at most one hour, or available
+funds for a shorter deadline, and refunds unused funds after the builder stops.
+No saved card is required; Stripe top-ups start at €5. See
+[billing and limits](https://docs.watasu.io/admin/billing-and-limits/) for details.
+
 ## Release Metadata
 
 - `latest.json` always points at the newest published release manifest.
